@@ -29,7 +29,7 @@ class GameData():
     # Creates object with accessible TrapPositions, MonsterPosition, PlayerPosition, FlaskPosition and MonsterAwake properties
     def __init__(self):
         self.TrapPositions = []
-        self.MonsterPosition = CellReferen1ce()
+        self.MonsterPosition = CellReference()
         self.PlayerPosition = CellReference()
         self.FlaskPosition = CellReference()
         self.MonsterAwake = Logical()
@@ -167,7 +167,7 @@ def DisplayCavern(Cavern, MonsterAwake):
         for Count2 in range(1, W_E_DISTANCE + 1):
             if Cavern[Count1][Count2] in [' ', '*'] or ((Cavern[Count1][Count2] == 'M') and MonsterAwake.Is):
                 print('|' + Cavern[Count1][Count2], end='')
-                else:
+            else:
                 print('| ', end='')
                 print('|')
             print(' ------------- ')
